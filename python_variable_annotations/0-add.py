@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Creating annotations for function arguments and return type"""
+"""Making annotations"""
 
 
 def add(a: float, b: float) -> float:
