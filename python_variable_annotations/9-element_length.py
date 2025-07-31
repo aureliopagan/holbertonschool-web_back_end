@@ -1,23 +1,8 @@
 #!/usr/bin/env python3
-"""Returns a function that multiplies a float by a given multiplier."""
+"""Returns a list of tuples containing sequences and their lengths."""
 
-from typing import Callable
+from typing import Iterable, Sequence, List, Tuple
 
-
-def make_multiplier(multiplier: float) -> Callable[[float], float]:
-    """
-    Takes a multiplier and returns a function that multiplies
-    a float by it.
-    """
-    def multiplier_func(x: float) -> float:
-        return x * multiplier
-    return multiplier_func
-
-
-if __name__ == "__main__":
-    # Test the function
-    times_2_5 = make_multiplier(2.5)
-    print(times_2_5(3))  # Output: 7.5
-
-    times_10 = make_multiplier(10)
-    print(times_10(5))  # Output: 50
+def element_length(lst: Iterable[Sequence]) -> List[Tuple[Sequence, int]]:
+    """Takes an iterable of sequences and returns a list of tuples with each sequence and its length."""
+    return [(i, len(i)) for i in lst]
