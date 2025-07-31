@@ -1,7 +1,9 @@
 #!/usr/bin/env python3
-"""Making annotations"""
+"""Add module"""
 
 
 def add(a: float, b: float) -> float:
-    """Returns the sum of the args"""
+    """
+    Returns the sum of a and b in float type
+    """
     return a + b
